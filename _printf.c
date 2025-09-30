@@ -11,8 +11,10 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int i = 0, count = 0;
+
 	if (format == NULL)
 		return (-1);
+
 	va_start(ap, format);
 	while (format[i])
 	{
@@ -43,4 +45,3 @@ int _printf(const char *format, ...)
 	va_end(ap);
 	return (count);
 }
-
