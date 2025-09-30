@@ -61,14 +61,13 @@ int print_number(int n)
 	return (count);
 }
 
-#include "main.h"
-
 /**
  * print_char - Prints a single character to stdout
  * @c: Character to print
+ *
  * Return: Number of characters printed (always 1)
  */
 int print_char(char c)
 {
-    return (_putchar(c));
+	return (_putchar(c));
 }

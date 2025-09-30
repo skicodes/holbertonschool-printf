@@ -5,7 +5,7 @@
 /**
  * _printf - produces output according to a format
  * @format: format string containing format specifiers
- * Return: Number of characters printes
+ * Return: Number of characters printed
  */
 int _printf(const char *format, ...)
 {
