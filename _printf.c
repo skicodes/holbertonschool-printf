@@ -1,12 +1,13 @@
 #include "main.h"
 #include <unistd.h>
+#include <stdarg.h>
 
 /**
  * _printf - produces output according to a format
  * @format: format string containing format specifiers
  * Return: Number of characters printes
  */
-int _printf(const char *format, ...);
+int _printf(const char *format, ...)
 {
 	va_list ap;
 	int i = 0, count = 0;
