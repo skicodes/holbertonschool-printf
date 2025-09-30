@@ -60,3 +60,15 @@ int print_number(int n)
 	count += _putchar((num % 10) + '0');
 	return (count);
 }
+
+#include "main.h"
+
+/**
+ * print_char - Prints a single character to stdout
+ * @c: Character to print
+ * Return: Number of characters printed (always 1)
+ */
+int print_char(char c)
+{
+    return (_putchar(c));
+}
