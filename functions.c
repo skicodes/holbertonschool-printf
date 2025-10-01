@@ -71,3 +71,78 @@ int print_char(char c)
 {
 	return (_putchar(c));
 }
+/**
+ * print_unsigned - Prints an unsigned integer
+ * @n: Number to print
+ *
+ * Return: Number of characters printed
+ */
+int print_unsigned(unsigned int n)
+{
+	int count = 0;
+
+	if (n / 10)
+		count += print_unsigned(n / 10);
+
+	count += _putchar((n % 10) + '0');
+	return (count);
+}
+
+/**
+ * print_octal - Prints an unsigned int in octal
+ * @n: Number to print
+ *
+ * Return: Number of characters printed
+ */
+int print_octal(unsigned int n)
+{
+	int count = 0;
+
+	if (n / 8)
+		count += print_octal(n / 8);
+
+	count += _putchar((n % 8) + '0');
+	return (count);
+}
+
+/**
+ * print_hex - Prints an unsigned int in hexadecimal
+ * @n: Number to print
+ * @uppercase: 1 to print in uppercase, 0 for lowercase
+ *
+ * Return: Number of characters printed
+ */
+int print_hex(unsigned int n, int uppercase)
+{
+	int count = 0;
+	char *digits;
+
+	if (uppercase)
+		digits = "0123456789ABCDEF";
+	else
+		digits = "0123456789abcdef";
+
+	if (n / 16)
+		count += print_hex(n / 16, uppercase);
+
+	count += _putchar(digits[n % 16]);
+	return (count);
+}
+
+/**
+ * print_binary_ulong - Prints an unsigned long in binary
+ *@n: Number to print
+Return: Number of characters printed
+*/
+int print_binary(unsigned int n)
+{
+	int count = 0;
+
+	if (n / 2)
+	count += print_binary(n / 2);
+
+	count += print_binary((n % 2) + '0');
+	return (count);
+}
+	
+
