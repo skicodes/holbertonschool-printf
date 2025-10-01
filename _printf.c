@@ -7,6 +7,30 @@
  * @format: format string containing format specifiers
  * Return: Number of characters printed
  */
+int print_binary(unsigned int n)
+{
+    int count = 0;
+    unsigned int mask = 1 << (sizeof(unsigned int) * 8 - 1);
+    int started = 0;
+
+    if (n == 0)
+        return print_char('0');
+
+    while (mask)
+    {
+        if (n & mask)
+        {
+            count += print_char('1');
+            started = 1;
+        }
+        else if (started)
+        {
+            count += print_char('0');
+        }
+        mask >>= 1;
+    }
+    return count;
+}
 int _printf(const char *format, ...)
 {
 	va_list ap;

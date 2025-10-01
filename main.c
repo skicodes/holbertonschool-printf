@@ -2,10 +2,7 @@
 
 int main(void)
 {
-    _printf("Number: %d\n", 12345);
-    _printf("Negative: %i\n", -678);
-    _printf("Zero: %d\n", 0);
-    _printf("Mix: %d %i %d\n", -1, 0, 42);
-
-    return (0);
+    int len = _printf("Binary: %b\n", 15);
+    _printf("Length printed: %d\n", len);
+    return 0;
 }
