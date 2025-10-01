@@ -60,6 +60,11 @@ int _printf(const char *format, ...)
 			{
                                 count += print_number(va_arg(ap, int));
 			}
+			else if (format[i] == 'b')
+			{
+				unsigned int val = va_arg(ap, unsigned int);
+				count += print_binary(val);
+			}
 			else
 			{
 				count += print_char('%');
